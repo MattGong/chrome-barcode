@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "16.png",
+      "default_title": "永辉条形码生成器，有问题联系龚建飞"
+   },
+   "content_scripts": [ {
+      "css": [ "jqueryui/css/redmond/jquery-ui-1.10.3.custom.new.css","css/barcontent.css" ],
+      "js": [ "jqueryui/js/jquery-1.9.1.js", "jqueryui/js/jquery-ui-1.10.3.custom.min.js", "js/content.js","js/jquery-barcode.min.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "在网页中选中文字右击生成条形码",
+   "icons":{"16":"16.png","48":"48.png","128":"128.png"},
+   "manifest_version": 2,
+   "name": "永辉条形码",
+   "permissions": [ "tabs", "contextMenus", "http://*/*", "https://*/*" ],
+   "update_url": "https://github.com/MattGong/chrome-barcode",
+   "version": "1.0",
+   "web_accessible_resources": [
+      "images/*"
+    ]
+}
